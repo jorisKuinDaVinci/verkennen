@@ -1,0 +1,73 @@
+lessonup.app t.m 13:30
+zelf werken aan opdrachten
+
+
+tussen de select en de from kan ik de ..... bepalen.
+na de where beinvloed ik het aantal ....
+
+
+Evt. DBeaver
+
+Let op: Wil je een kolom van het type string selecteren? Let dan op de strings dus bijv. ... where name = "Pelt"
+
+de not levert precies het tegenovergesteld. Dus 
+	  ... where type = "Sheep"
+tegenover ... where not type = "Sheep"
+
+not id = 2 (doet het tegenovergestelde)
+
+
+wil je meer types dan kun je ook een in gebruiken.
+Bijv. ... where type in ("Sheep", "Wolf")
+
+
+
+
+select * from animal (voorbeeld code)
+
+
+front-end taal= html
+back-end taal = python
+werken met AskWhile (SQL)
+wat weten bedrijven van jouw?:
+betaalgegevens
+naw = naam adres woonplaats
+e-mail
+geboortedatum
+
+----------------------------------------------
+
+
+tables (tabellen):
+----------------
+[              ]
+----------------
+[              ]
+----------------
+[              ]
+----------------
+[              ]
+----------------
+[              ]
+----------------
+[              ]
+----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select kolemnaam, kolomnaam of * from tabelnaam where coditie: id > 3 (veldnaam vergelijking waarde)

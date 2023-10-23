@@ -1,0 +1,35 @@
+select * from teachers; #09:09:21@dvc-sd.db
+select * from teachers
+where id = 1; #09:11:45@dvc-sd.db
+select * from region
+; #09:16:00@rubyquest.db
+select * from region
+where id = 1; #09:16:16@rubyquest.db
+select * from animal 
+; #09:18:29@rubyquest.db
+select * from animal 
+; #09:19:37@rubyquest.db
+select * from animal 
+where owner = 2; #09:20:58@rubyquest.db
+select * from animal 
+where type = "Sheep"
+; #09:25:43@rubyquest.db
+select * from quest
+; #09:38:58@rubyquest.db
+select * from person
+; #09:52:07@rubyquest.db
+select * from hero
+; #09:52:31@rubyquest.db
+select * from person
+; #09:53:11@rubyquest.db
+select * from npc
+
+; #09:53:34@rubyquest.db
+select * from person
+
+
+; #09:53:53@rubyquest.db
+select * from person
+
+
+; #09:56:47@rubyquest.db

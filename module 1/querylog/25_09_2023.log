@@ -1,0 +1,36 @@
+select * from teachers; #13:33:30@dvc-sd.db
+select firstname, lastname from teachers; #13:35:20@dvc-sd.db
+select * from teachers where code = 'RVP'; #13:37:59@dvc-sd.db
+select * from teachers; #13:45:11@dvc-sd.db
+select * from weapon; #13:52:33@rubyquest.db
+select * from armor; #13:53:28@rubyquest.db
+select id name from armor; #13:54:20@rubyquest.db
+select * from armor; #13:54:40@rubyquest.db
+select name from armor; #13:54:56@rubyquest.db
+select * from weapon; #13:55:45@rubyquest.db
+select * from weapon; #13:56:35@rubyquest.db
+select name and attack from weapon; #13:57:22@rubyquest.db
+select name, attack from weapon; #13:57:31@rubyquest.db
+select * from creature; #13:58:17@rubyquest.db
+select name, health from creature; #13:59:19@rubyquest.db
+select name, attack from weapon; #14:00:11@rubyquest.db
+select name from armor; #14:00:50@rubyquest.db
+select * from creature; #14:01:23@rubyquest.db
+select * from quest; #14:03:19@rubyquest.db
+select * from person; #14:03:42@rubyquest.db
+select * from hero; #14:04:05@rubyquest.db
+select * from person where id='7';; #14:15:57@rubyquest.db
+select * from quest; #15:20:54@rubyquest.db
+select * from animal; #15:22:20@rubyquest.db
+select * from animal; #15:24:12@rubyquest.db
+select * from animal; #15:25:52@rubyquest.db
+select * from animal ; #15:27:04@rubyquest.db
+select * from animal; #15:28:17@rubyquest.db
+select type from animal; #15:28:33@rubyquest.db
+select type from animal; #15:29:15@rubyquest.db
+select type from animal; #15:30:36@rubyquest.db
+select * from animal where type='sheep';; #15:33:42@rubyquest.db
+select * from animal ; #15:34:03@rubyquest.db
+select * from animal where type='sheep';; #15:34:13@rubyquest.db
+select * from animal where type = 'sheep';; #15:34:26@rubyquest.db
+select * from animal where type = 'sheep'; #15:34:29@rubyquest.db

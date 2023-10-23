@@ -1,0 +1,22 @@
+select * from courses 
+
+select name from courses  
+
+select max(id) from courses 
+
+select id from courses  
+
+select avg(id) from courses 
+
+select * from courses where id in (6, 7)
+
+select count(*) from courses where id in (6, 7)
+
+select min(id) from courses where id in (6, 7)
+
+select max(id) from courses where id in (6, 7)
+
+select avg(id) from courses where id in (6, 7)
+
+
+

@@ -1,0 +1,20 @@
+create table product(
+id INTERGER PRIMARY KEY,
+naam varchar(25),
+soort interger,
+prijs real,
+prijs_10 real,
+allergenen varchar(50)
+); #09:50:55@oliebollenkraam.db
+INSERT INTO product (id, naam, soort, prijs, prijs_10, allergenen) VALUES (1, 'Oliebollen', 2, 1.5, 13.0, 'Gluten, Eggs ' );; #09:59:14@oliebollenkraam.db
+select * from product; #09:59:35@oliebollenkraam.db
+INSERT INTO product (id, naam, soort, prijs, prijs_10, allergenen) VALUES (2, 'Appelflappen', 3, 2.5, 14.0, 'Gluten, Eggs ' );; #10:02:44@oliebollenkraam.db
+select * from product; #10:03:00@oliebollenkraam.db
+create table product(
+id INTERGER PRIMARY KEY,
+naam varchar(25),
+soort interger,
+prijs real,
+heeft DLC interger
+); #10:13:09@99074486.db
+select * from product; #10:14:18@99074486.db
