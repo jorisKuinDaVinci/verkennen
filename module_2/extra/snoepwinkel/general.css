@@ -1,0 +1,39 @@
+header h1 {
+    color: green;
+}
+
+header {
+    color: blue;
+    text-decoration-thickness: auto;
+}
+
+section h2 { 
+    color: orange;
+}
+
+section p:nth-child(2) {
+    color: blue;
+    text-decoration-thickness: auto;
+}
+
+section p:nth-child(3) {
+    color: yellow;
+    font-style: cursive;
+}
+
+#Unieke {
+    color: yellow;
+    font-style: cursive;
+    background-color: red;
+}
+
+.last{
+    color: red;
+    font-style: monospace;
+}
+
+footer p {
+    color: red;
+    font-style: monospace;
+    text-decoration: underline;
+}

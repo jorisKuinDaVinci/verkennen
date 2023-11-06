@@ -1,0 +1,36 @@
+ol {
+    background-color: yellow;
+    color: red;
+}
+
+ol li:nth-child(1) {
+    background-color: orange;
+}
+
+#bla {
+    background-color: burlywood;
+}
+
+section p {
+    background-color: aqua;
+}
+
+p {
+    background-color: blue;
+    color: white;
+}
+
+ul li:nth-child(4) {
+    animation: blinker 1s linear infinite;
+    background-color: red;
+}
+
+#drie {
+    background-color: green;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
