@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+header {
+    background-color: red;
+    color: black;
+    padding: 10px;
+    margin-top: 10px;
+    border: 3px yellow solid;
+    border-radius: 25px;
+    margin: 10px;
+}
+
+h2 {
+    color: black;
+}
+
+h3 {
+    color: yellow;
+}
+
+section {
+    background-color: red;
+    color: black;
+    padding: 10px;
+    margin-top: 10px;
+    border: 3px yellow solid;
+    border-radius: 25px;
+    margin: 10px;
+}
+
+section h3:nth-child(2) {
+    background-color: green;
+}
