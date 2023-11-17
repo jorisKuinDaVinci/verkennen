@@ -1,0 +1,33 @@
+body{
+    background-color: gray;
+}
+
+.shape1{
+    background-color: aliceblue;
+    border: 1px dashed black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+}
+.shape1:hover{
+    animation-play-state: paused;
+}
+@keyframes rotate {
+    25%{
+        width: 200px;
+        background-color: aquamarine;
+    }
+    50%{
+        transform: rotate(180deg);
+        background-color: blueviolet;
+        width: 120px;
+    }
+    75%{
+        width: 22px;
+    }
+    100%{
+        transform: rotate(360deg);
+        background-color: aquamarine;
+    }
+}
