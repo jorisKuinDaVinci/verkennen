@@ -46,10 +46,10 @@ h1 {
 }
 
 @media (max-width: 576px) {
-  .small, .medium, .large {
+  .tiny, .medium, .large {
       display: none;
   }
-  .tiny {
+  .small {
       display: block;
   }
   body {
@@ -58,10 +58,10 @@ h1 {
 }
 
 @media (min-width: 576px) {
-  .tiny, .medium, .large {
+  .small, .medium, .large {
       display: none;
   }
-  .small {
+  .tiny {
       display: block;
   }
   body{
