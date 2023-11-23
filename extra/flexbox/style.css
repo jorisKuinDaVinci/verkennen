@@ -1,0 +1,14 @@
+
+nav {
+
+  background-color: darkseagreen;
+}
+
+nav>div {
+
+  height: 30px;
+  background-color: lightseagreen;
+  margin:2px;
+  text-align: center;
+  padding: 20px;
+}
