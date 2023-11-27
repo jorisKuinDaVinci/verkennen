@@ -1,3 +1,4 @@
+  
   body {
     width: 95%;
     margin: 0 auto;
@@ -5,28 +6,56 @@
   }
 
   section.projecten {
-    /* zorg dat dit een flexbox wordt en zorg dat de items worden gewrapt */
+    flex-basis: 100px;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   div.project {
-    /* bepaal: opvulling, relatieve breedte tov section.projecten, tekstuitlijning (centrum), minimale breedte */
+    flex-basis: 100px;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   p.logo {
-    /* bepaal: vaste hoogte */
+    flex-basis: 100px;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   p.logo img {
-    /* bepaal: relatieve breedte van de afbeelding tov div.project */
+    flex-basis: 100px;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   p.language {
-    /* bepaal: font-relatieve lettergrootte */
+    flex-basis: 100px;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   p.title {
-    /* bepaal: font-relatieve lettergrootte, letterdikte*/
+    flex-basis: 100px;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   p.description{
-    /* bepaal: font-relatieve lettergrootte, tekstuitlijning links*/
+    flex-basis: 100px;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
