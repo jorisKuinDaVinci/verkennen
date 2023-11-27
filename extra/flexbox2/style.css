@@ -1,0 +1,43 @@
+
+nav {
+  display: flex;
+  background-color: red;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: yellowgreen;
+}
+
+nav>div {
+  flex-basis: 50px;
+  flex-grow: 1;
+  height: 30px;
+  background-color: lightseagreen;
+  margin:2px;
+  text-align: center;
+  padding: 20px;
+  color: orange;
+}
+
+nav>div:nth-child(1) {
+  flex-basis: 100px;
+  flex-grow: 2;
+  color: saddlebrown;
+}
+
+nav>div:nth-child(2) {
+  flex-basis: 100px;
+  flex-grow: 2;
+  color: yellow;
+}
+
+nav>div:nth-child(3) {
+  flex-basis: 100px;
+  flex-grow: 2;
+  color: blue;
+}
+
+nav>div:nth-child(4) {
+  flex-basis: 100px;
+  flex-grow: 2;
+  color: lawngreen;
+}
