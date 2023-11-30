@@ -1,0 +1,42 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    color: black;
+}
+header {
+    background-color: white;
+    color: black;
+}
+section h2 {
+    background-color: white;
+    color: black;
+}
+section h3 {
+    background-color: white;
+    color: black;
+}
+section h4 {
+    background-color: white;
+    color: black;
+}
+section ul {
+    background-color: white;
+    color: black;
+}
+section p:nth-child(2) {
+    background-color: white;
+    color: black;
+}
+section p:nth-child(3) {
+    background-color: white;
+    color: black;
+}
+.large-img {
+    display: none;
+    float: right;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid black;
+    background-color: white;
+    width : 480px;
+  }
