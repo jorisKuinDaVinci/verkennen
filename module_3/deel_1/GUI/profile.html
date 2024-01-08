@@ -9,25 +9,31 @@
   <form id="form_profile">
     <p>
       <label>Name: </label>
-      <input type="text" name="input_name" id="input_name">
+      <input type="text" name="input_name" id="input_name" required>
+    </p>
+    <p>
+      <label>Birth Date: </label>
+      <input type="text" name="input_birth_date" id="input_birth_date" required>
     </p>
     <p>
       <label>Address: </label>
-      <input type="text" name="input_address" id="input_address">
+      <input type="text" name="input_address" id="input_address" required>
     </p>
     <p>
       <label>Zipcode: </label>
-      <input type="text" name="input_zipcode" id="input_zipcode">
+      <input type="text" name="input_zipcode" id="input_zipcode" required>
     </p>
     <p>
       <label>City: </label>
-      <input type="text" name="input_city" id="input_city">
+      <input type="text" name="input_city" id="input_city" required>
     </p>
     <input type="submit" id="submit_button" value="submit">
+    <input type="reset" id="reset_button" value="reset">
   </form>
   <div id="profile">
     <h1>Profile</h1>
     <p><label>Name: </label><span id="display_name"></span></p>
+    <p><label>Birth Date: </label><span id="display_birth_date"></span></p>
     <p><label>Address: </label><span id="display_address"></span></p>
     <p><label>Zipcode: </label><span id="display_zipcode"></span></p>
     <p><label>City: </label><span id="display_city"></span></p>
@@ -36,6 +42,7 @@
   <script>
     function submit(event){
       display_name.textContent = input_name.value;
+      display_birth_date.textContent = input_birth_date.value;
       display_address.textContent = input_address.value;
       display_zipcode.textContent = input_zipcode.value;
       display_city.textContent = input_city.value;
@@ -47,6 +54,15 @@
       event.preventDefault();
     }
     form_profile.addEventListener('submit',form_submit)
+
+    function reset(event){
+      display_name.textContent = '';
+      display_birth_date.textContent = '';
+      display_address.textContent = '';
+      display_zipcode.textContent = '';
+      display_city.textContent = '';
+    }
+    reset_button.addEventListener('click',reset);
 
   </script>
 </body>
