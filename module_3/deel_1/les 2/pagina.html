@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eerste pagina met JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Dit is mijn header</h1>
+    <div>Geboortejaar uitrekenen</div>
+    <form id="form_profile">
+        <p>
+          <label>Leefdtijd: </label>
+          <input type="text" name="input_leefdtijd" id="input_leefdtijd" required>
+        </p>
+    <div id="leeg" class="yellow">Test</div>
+    <div id="buttons"><button id="hier">klik hier!</button>
+        <button id="maakLeegButton">Maak leeg!</button>
+    </div>
+    <script>
+        function maakLeeg() {
+            leeg.innerText = "";
+        };
+
+        function handleHierButton() {
+            const currentYear = new Date().getFullYear();
+            const age = input_leefdtijd.value || 0;
+            const birthYear = currentYear - age; // let op: dit klopt niet altijd!
+            //console.log(age);
+            //console.dir(input_leefdtijd);
+
+            leeg.innerText = `Je bent geboren in: ${birthYear}`;
+            leeg.className = "green";
+            if (age < 18) { // de or is || en de and is &&
+                leeg.className = "red";
+            };
+            // vanaf hier alleen nog maar syntaxuitleg!!!
+            let y = 0;
+            for (let x = 0; x < 3; x++) { // x++ is gelijk aan x = x + 1
+                console.log(`x is gelijk aan ${x}`);
+                y++;
+                console.log(`y is gelijk aan ${y}`);
+            };
+
+        };
+
+        hier.addEventListener("click", handleHierButton);
+        maakLeegButton.addEventListener("click", maakLeeg);
+
+    </script>
+</body>
+
+</html>
