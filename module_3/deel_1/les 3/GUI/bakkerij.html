@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <title>base</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Offertetool bakker Jan</h1>
+  <form id="form">
+    <p>
+      <label>Aantal stokbroden: </label>
+      <input type="text" name="input" id="input">
+    </p>
+    <input type="submit" id="submit_button" value="berekenen">
+  </form>
+  <div id="result">
+    <h1>Result</h1>
+    <p><label>Te betalen: </label><span id="detail"></span></p>
+  </div>
+
+  <script>
+    const STOKBROOD_PRIJS = 1.92;
+
+    function submit(event){
+        let totaal_bedrag = 0;
+        const aantal_stokbroden = input.value;
+        //console.log(aantal_stokbroden);
+        totaal_bedrag = totaal_bedrag + aantal_stokbroden * STOKBROOD_PRIJS;
+        //console.log(`€ ${totaal_bedrag.toFixed(2)}`);
+        detail.innerText = `€ ${totaal_bedrag.toFixed(2)}`;
+    }
+    submit_button.addEventListener('click',submit);
+
+    // prevent document from default trying to really submit
+    function form_submit(event){
+      event.preventDefault();
+    }
+    form.addEventListener('submit',form_submit)
+
+  </script>
+</body>
+</html>
