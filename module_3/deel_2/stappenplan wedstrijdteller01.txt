@@ -1,0 +1,20 @@
+puntentelling
+teams invoeren + toevoegen aan scorebord
+wie begint er?
+start de wedstrijd programmeren
+checken: 
+2 namen
+wie begint?
+teams invoeren moet verdwijnen
+gele vlak bij startende team
+puntenknoppen activeren
+tijdens het spel bijhouden:
+wie is er aan de beurt
+punten per team
+scherm verversen
+
+annuleerknop:
+punt aftrekken
+bijwerken gele vlak 
+
+
