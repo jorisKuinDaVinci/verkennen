@@ -1,0 +1,30 @@
+
+
+body {
+  margin: 0;
+  padding: 10px;
+  background-color: darkgreen;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#pakButton{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: absolute;
+  /*left: ;
+  top: ;*/
+}
+
+.black{
+  background-color: black;
+}
+
+.yellow{
+  background-color: yellow;
+}
+
+/* set for timeout period where counters are disabled */
+.waiting * {
+  cursor: wait;
+}
