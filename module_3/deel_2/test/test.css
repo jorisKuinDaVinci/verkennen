@@ -7,13 +7,18 @@ body {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/*h3 {
+  background-color: white;
+  text-align: center;
+}*/
+
 #pakButton{
   margin-left: auto;
   margin-right: auto;
   display: block;
   position: absolute;
-  /*left: ;
-  top: ;*/
+  left: 20px;
+  top: 50px;
 }
 
 .black{
@@ -22,6 +27,10 @@ body {
 
 .yellow{
   background-color: yellow;
+}
+
+#counter {
+  color: red;
 }
 
 /* set for timeout period where counters are disabled */
