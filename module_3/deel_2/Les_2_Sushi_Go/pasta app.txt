@@ -1,0 +1,9 @@
+eten app
+stap 1: bepaal wat voor eten in het restaurant (pasta)
+stap 2: denk na over de layout (je kunt een schetje maken! + functionaliteit.)
+stap 3: gerechten bepalen, minimaal 3 gerechten! (pasta met tomaten saus, pasta met groente, pasta zonder saus en groente)
+
+
+ontwikkel 
+
+stap 4: html (je kunt chat gtp gebruiken!)
