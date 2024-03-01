@@ -69,6 +69,14 @@ body {
   width: 100%;
   font-size: 24px;
 }
+
+#setScores {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: white;
+}
   </style>
 </head>
 <body>
@@ -99,20 +107,25 @@ body {
     </div>
   </div>
   <button id="undoButton">Annuleer</button>
+  <div id="setScores"></div>
   <script>
 inputTeams = document.getElementById('input-teams');
+let setScoresDisplay = document.getElementById('setScores');
 
 let game =
 {
     team1Punten: 0,
-    team2Punten: 1,
-    serving:0,
-    lastServe:0, // wie vorige service
-    lastScored:0  
+    team2Punten: 0,
+    team1Sets: 0,
+    team2Sets: 0,
+    serving: 0,
+    lastServe: 0, // wie vorige service
+    lastScored: 0,
+    currentSet: 1
 } 
 
-inputTeam1.value = '...'; // testdata
-inputTeam2.value = '...'; // testdata
+inputTeam1.value = 'Team 1'; // testdata
+inputTeam2.value = 'Team 2'; // testdata
 
 function updateScreen(){
     // maak juiste button geel!
@@ -169,11 +182,36 @@ function count(event){
         game.lastScored = 2;
     }
 
+    checkSetWin();
     undoButton.disabled = false;
     updateScreen();
 }
 counterTeam1.addEventListener('click',count);
 counterTeam2.addEventListener('click',count);
+
+function checkSetWin(){
+    if (game.team1Punten >= 25 && game.team1Punten - game.team2Punten >= 2) {
+        game.team1Sets++;
+        saveSetScore();
+        resetCounters();
+    } else if (game.team2Punten >= 25 && game.team2Punten - game.team1Punten >= 2) {
+        game.team2Sets++;
+        saveSetScore();
+        resetCounters();
+    }
+}
+
+function saveSetScore(){
+    setScoresDisplay.innerText = `Set Score: Team 1 - ${game.team1Sets}, Team 2 - ${game.team2Sets}`;
+}
+
+function resetCounters(){
+    game.team1Punten = 0;
+    game.team2Punten = 0;
+    game.currentSet++;
+    game.serving = game.lastServe == 1 ? 2 : 1;
+    updateScreen();
+}
 
 function displayNames(event){
     nameTeam1.innerText = inputTeam1.value;

@@ -48,8 +48,6 @@
             <input type="number" id="penne" name="penne" min="0"><br><br>
             <label for="fusilli">Fusilli:</label>
             <input type="number" id="fusilli" name="fusilli" min="0"><br><br>
-            <label for="rounds">Rondes (max. 5):</label>
-            <input type="number" id="rounds" name="rounds" min="1" max="5" value="1"><br><br>
             <input type="submit" value="Bestellen">
         </form>
         <hr>
@@ -57,25 +55,25 @@
     </div>
 
     <script>
+        let roundsLeft = 5; // Initial number of rounds
+        
         document.getElementById("pastaForm").addEventListener("submit", function(event) {
             event.preventDefault();
             
             const spaghetti = parseInt(document.getElementById("spaghetti").value);
             const penne = parseInt(document.getElementById("penne").value);
             const fusilli = parseInt(document.getElementById("fusilli").value);
-            const rounds = parseInt(document.getElementById("rounds").value);
             
             const totalSpaghetti = spaghetti || 0;
             const totalPenne = penne || 0;
             const totalFusilli = fusilli || 0;
             
             const totalOrders = totalSpaghetti + totalPenne + totalFusilli;
-            const totalRounds = Math.min(rounds, 5); // Limit to max. 5 rounds
-            const totalPrice = totalOrders * totalRounds;
+            const totalPrice = 50; // Totaalprijs is altijd 50 euro
             
             const orderSummary = `
                 <h3>Bestellingsoverzicht</h3>
-                <p>Rondes: ${totalRounds}</p>
+                <p>Rondes over: ${roundsLeft}</p>
                 <p>Spaghetti: ${totalSpaghetti}</p>
                 <p>Penne: ${totalPenne}</p>
                 <p>Fusilli: ${totalFusilli}</p>
@@ -84,6 +82,12 @@
             `;
             
             document.getElementById("orderSummary").innerHTML = orderSummary;
+            
+            roundsLeft--; // Aftellen van het aantal rondes na elke bestelling
+            
+            if (roundsLeft <= 0) {
+                document.getElementById("pastaForm").style.display = "none"; // Verberg het bestelformulier als alle rondes zijn besteld
+            }
         });
     </script>
 </body>
