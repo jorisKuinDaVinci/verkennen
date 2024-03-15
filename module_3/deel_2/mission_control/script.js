@@ -29,6 +29,7 @@ function set_stage_1() {
     button.innerText = 'Start countdown';
     counter.innerText = "";
     rocket.className = 'state1';
+    seconds2 = 10;
 
     clearInterval(countdown_timer);
     button.removeEventListener('click',set_stage_1);
@@ -97,17 +98,16 @@ function set_stage_6() {
 
 // voer een functie (event) uit na x seconden, zonder count down
 function start_timed_event(seconds, event) {
-    counter.innerText = seconds2;
-    seconds2--;
-    if (seconds2 < 6) {
-        rocket.className = 'state3';
-    }
 
 }
 
 // voer een functie (event) uit na x seconden, met count down
 function start_countdown_event(seconds, event){
-    
+    counter.innerText = seconds2;
+    seconds2--;
+    if (seconds2 < 6) {
+        rocket.className = 'state3';
+    }
 
 }
 
