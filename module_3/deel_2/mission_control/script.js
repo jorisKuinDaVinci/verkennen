@@ -20,7 +20,7 @@ function set_rocket_state(state) {
 }
 
 /* stage 1:
-    set mission control: Prepare to Launch, button 'Start count down naar stage 2
+    set mission control: Prepare to Launch, button 'Start countdown naar stage 2
     set rocket state: 1
 */
 function set_stage_1() {
@@ -30,6 +30,9 @@ function set_stage_1() {
     counter.innerText = "";
     rocket.className = 'state1';
 
+    clearInterval(countdown_timer);
+    button.removeEventListener('click',set_stage_1);
+    button.addEventListener('click',set_stage_2);
 }
 
 /* stage 2:
@@ -85,7 +88,7 @@ function start_timed_event(seconds, event) {
 
 // voer een functie (event) uit na x seconden, met count down
 function start_countdown_event(seconds, event){
-    Counter.innerText
+    
 
 }
 
