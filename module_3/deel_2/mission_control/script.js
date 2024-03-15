@@ -60,6 +60,11 @@ function set_stage_2() {
 */
 function set_stage_3() {
     subtitle.innerText = 'Lift off';
+    button.classList.replace('show','hide');
+    counter.innerText = "";
+    rocket.className = 'state4';
+
+    setTimeout(set_stage_4,3000);
 
 }
 
@@ -92,6 +97,11 @@ function set_stage_6() {
 
 // voer een functie (event) uit na x seconden, zonder count down
 function start_timed_event(seconds, event) {
+    counter.innerText = seconds2;
+    seconds2--;
+    if (seconds2 < 6) {
+        rocket.className = 'state3';
+    }
 
 }
 
