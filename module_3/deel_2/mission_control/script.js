@@ -2,6 +2,13 @@
 var countdown_event = null;
 var timed_event = null;
 
+var button = document.getElementById("control-button");
+var subtitle = document.getElementById("control-title");
+var counter = document.getElementById("countdown");
+var rocket = document.getElementById("rocket");
+var seconds2;
+var countdown_timer;
+
 // zet de mission control title, button en clear de countdown (interval & nummer) en timeout
 function set_mission_control(title, buttonTitle, buttonOnclick) {
 
@@ -17,6 +24,11 @@ function set_rocket_state(state) {
     set rocket state: 1
 */
 function set_stage_1() {
+    subtitle.innerText = 'Prepare to Launch';
+    button.classList.replace('hide','show');
+    button.innerText = 'Start countdown';
+    counter.innerText = "";
+    rocket.className = 'state1';
 
 }
 
@@ -73,6 +85,7 @@ function start_timed_event(seconds, event) {
 
 // voer een functie (event) uit na x seconden, met count down
 function start_countdown_event(seconds, event){
+    Counter.innerText
 
 }
 
