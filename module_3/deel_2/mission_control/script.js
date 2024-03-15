@@ -42,6 +42,14 @@ function set_stage_1() {
     start coundown event: na 10 seconden naar stage 3
 */
 function set_stage_2() {
+    subtitle.innerText = 'Counting down';
+    button.innerText = 'Abort';
+    rocket.className = 'state2';
+
+    countdown_timer = setInterval(start_countdown_event,1000)
+
+    button.removeEventListener('click',set_stage_2);
+    button.addEventListener('click',set_stage_1);
 
 }
 
@@ -51,6 +59,7 @@ function set_stage_2() {
     start timed event: na 3 seconden naar stage 4
 */
 function set_stage_3() {
+    subtitle.innerText = 'Lift off';
 
 }
 
