@@ -1,11 +1,27 @@
 let container = document.getElementById('container');
 
-function create_button(type){
+function create_button(soortknop){
     // creeer een standaard button element
-
+    const knop = document.createElement('button');
+    knop.type = 'button';
     // maak een switch of if statement die de specifieke elementen van een button zet
-
+    if (soortknop === 'add') {
+        knop.innerHTML = 'Add cookies';
+        knop.onclick = proccess_addcookies_click;
+        console.log(knop);
+    }
+    if (soortknop === 'take') {
+        knop.innerHTML = 'Take cookie';
+        knop.onclick = proccess_takecookie_click;
+        console.log(knop);
+    }
+    if (soortknop === 'place') {
+        knop.innerHTML = 'Place lit';
+        knop.onclick = proccess_placelit_click;
+        console.log(knop);
+    }
     // return het button element
+    return knop;
 }
 
 function proccess_takecookie_click(){ 
@@ -64,13 +80,19 @@ function create_cookie(){
 
 function build_controlls() {
     // maak een array met de 3 verschillende buttons
-    
+    const controlList = [create_button('add'), create_button('take'), create_button('place')];
+    console.log(controlList);
     // genereer een div element met het id controls
-
-    // loop door de array met buttons en roep voor iedere button de create_button functie aan
+    const controls = document.createElement('div');
+    controls.id = 'controls';
+    // loop door de array met buttons
     // voeg vervolgens na het aanroepen vann de functie de button aan de controls toe
-
+    controlList.forEach(b => {
+        //console.log(b);
+        controls.appendChild(b)
+    });
     // voeg de controls toe aan de container
+    container.appendChild(controls);
 }
 
 build_controlls()
