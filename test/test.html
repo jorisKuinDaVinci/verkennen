@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prefolio Joris</title>
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
+    <style>
+        /* Reset en basisstijlen */
+        body, h1, h2, h3, h4, p, ul, li, header, section, footer, nav, a {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #121212; /* Donkergrijze achtergrond */
+            color: #EEEEEE; /* Lichtgrijze tekst */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Algemene sectiestijlen */
+        section {
+            padding: 20px;
+            margin: 20px;
+            border: 3px solid #2196F3; /* Blauwe rand */
+            border-radius: 25px;
+            background-color: #1E1E1E; /* Donkergrijze achtergrond */
+        }
+
+        /* Kopstijlen */
+        h1, h2, h3, h4 {
+            margin-top: 20px;
+            color: #FF5722; /* Oranje kopteksten */
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2, h3, h4 {
+            margin-top: 10px;
+            color: #2196F3; /* Blauwe tekst */
+        }
+
+        /* Paragraafstijlen */
+        p {
+            margin-top: 10px;
+            color: #2196F3; /* Blauwe tekst */
+            background-color: #1E1E1E; /* Donkergrijze achtergrond */
+            padding: 10px;
+            border: 3px solid #2196F3; /* Blauwe rand */
+            border-radius: 25px;
+        }
+
+        /* Links en navigatie */
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #2196F3; /* Blauwe rand */
+            color: #2196F3; /* Blauwe tekst */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            background-color: #2196F3; /* Blauwe achtergrond bij hover */
+            color: #FFFFFF; /* Witte tekst bij hover */
+        }
+
+        /* Media Query-stijlen */
+        @media (max-width: 576px) {
+            body {
+                width: 300px;
+                background-color: #121212; /* Donkergrijze achtergrond */
+            }
+
+            .tiny {
+                display: block;
+            }
+        }
+
+        @media (min-width: 576px) {
+            .small {
+                display: block;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .medium {
+                display: block;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .large {
+                display: block;
+            }
+
+            body {
+                background-color: #121212; /* Donkergrijze achtergrond */
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // JavaScript om de kleuren van de achtergrond en tekst te wijzigen
+        window.onload = function() {
+            var body = document.body;
+            var width = window.innerWidth;
+
+            // Functie om achtergrondkleur en tekstkleur te wijzigen op basis van de schermgrootte
+            function updateColors() {
+                if (width >= 992) {
+                    body.style.backgroundColor = '#121212'; // Donkergrijze achtergrond
+                    body.style.color = '#EEEEEE'; // Lichtgrijze tekst
+                } else if (width >= 768) {
+                    body.style.backgroundColor = '#1E88E5'; // Blauwe achtergrond
+                    body.style.color = '#FFFFFF'; // Witte tekst
+                } else if (width >= 576) {
+                    body.style.backgroundColor = '#FBC02D'; // Gele achtergrond
+                    body.style.color = '#212121'; // Zwarte tekst
+                } else {
+                    body.style.backgroundColor = '#D32F2F'; // Rode achtergrond
+                    body.style.color = '#FFFFFF'; // Witte tekst
+                }
+            }
+
+            // Voer de updateColors-functie uit wanneer de grootte van het scherm verandert
+            window.onresize = function() {
+                width = window.innerWidth;
+                updateColors();
+            };
+
+            // Initialiseer kleuren bij laden van de pagina
+            updateColors();
+        };
+    </script>
+    <header>
+        <h1>Prefolio Joris</h1>
+        <nav>
+            <a href="projecten.html">Projecten</a>
+        </nav>
+        <h2>Over mij</h2>
+        <p>Mijn naam is <strong>Joris Kuin</strong>. Ik ben <strong>17 jaar</strong> en woon in <strong>Zwijndrecht</strong>.</p>
+    </header>
+    <section class="large">
+        <h2>"Large vanaf breedte 992px"</h2>
+        <p>Desktop of laptop</p>
+    </section>
+    <section class="medium">
+        <h2>"Medium vanaf breedte 768px"</h2>
+        <p>IPad of Tablet.</p>
+    </section>
+    <section class="small">
+        <h2>"Small vanaf breedte 576px"</h2>
+        <p>Smartphone</p>
+    </section>
+    <section class="tiny">
+        <h2>"Tiny tot breedte 576px"</h2>
+        <p>Mini schermpje</p>
+    </section>
+    <section>
+        <h2>Waarom gekozen voor Software Developer?</h2>
+        <p>Ik ben een enthousiaste, gedreven student in de opleiding Software Development. Sinds enkele jaren ben ik al bezig met programmeren van mods voor EAW FOC. Programmeren past helemaal bij mij. Mijn ambitie is om me te ontwikkelen tot degelijke allround developer.</p>
+    </section>
+    <section>
+        <h2>Opleiding</h2>
+        <p>Mijn opleiding heeft me ruim voldoende voorbereid op een oriënterende stage in de praktijk. Ik heb kennisgemaakt met het volgende:</p>
+        <h3>Ontwikkeltalen:</h3>
+        <ul>
+            <li>Python (uitgebreid)</li>
+            <li>HMTL (uitgebreid)</li>
+            <li>CSS (uitgebreid)</li>
+            <li>JavaScript (intro)</li>
+            <li>SQL (intro)</li>
+        </ul>
+        <h4>Succesvol afgeronde modules:</h4>
+        <ul>
+            <li>Bootcamp: </li>
+            <li>Python syntax, toepassing en werking value types, expressions, operators, variables, typecasting, conditional statements, while loops, exception handling, lists, for loops, nesting, function definitions, GIT</li>
+            <li>Python Programming</li>
+            <li>Verzamelen van data</li>
+            <li>SQL queries, where clauses, aggragates, joins</li>
+            <li>Frontend web development - webpages</li>
+            <li>HTML, CSS, URL's, Responsive webdesign, Bootstrap</li>
+            <li>Developer Skills</li>
+            <li>Communiceren, samenwerken, analyseren, ontwerpen, plannen, presenteren</li>
+            <li>Basis ICT</li>
+            <li>Intro computers, operating systems, netwerken</li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024-Joris Kuin</p>
+    </footer>
+</body>
+</html>
