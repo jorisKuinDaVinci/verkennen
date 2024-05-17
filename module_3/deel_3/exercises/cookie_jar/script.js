@@ -37,17 +37,20 @@ function proccess_takecookie_click(){
 }
 
 function proccess_addcookies_click() {
-    let jar; //vul deze variable met het element cookie-jar
+    let jar = document.getElementById('cookie-jar'); //vul deze variable met het element cookie-jar
     let currentcookies; // vul deze variablelen met het huidige aantal cookies in de jar 
-
+    
+    let cookie = create_cookie()
+    jar.appendChild(cookie);
+    return
     let repeat = true;
     while (repeat){
         // vraag hoeveel cookies iemand wil toevoegen
-        
+    
         // reken uit hoeveel cookies het totaal zou worden
 
         repeat; // vul deze variablen met een boolean die true is als het aantal gevraagde cookies + aantal toegevoegde cookies groter is dan 7
-
+        
         if (repeat) {
             // geef hier het bericht naar de gebruiker aan wat het maximale aantal cookies is dat ingevuld mocht worden.
         }
@@ -73,6 +76,7 @@ function proccess_placelit_click() {
 
 // zorg dat het nummer van iedere cookie wordt weergegeven
 function create_cookie(){
+    console.log('create cookie');
     const cookie = document.createElement('div');
     cookie.classList.add('cookie');
     cookie.innerHTML = 'Cookie';
