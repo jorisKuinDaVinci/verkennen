@@ -4,21 +4,23 @@ function create_button(soortknop){
     // creeer een standaard button element
     const knop = document.createElement('button');
     knop.type = 'button';
+    knop.textContent = soortknop
     // maak een switch of if statement die de specifieke elementen van een button zet
-    if (soortknop === 'add') {
-        knop.innerHTML = 'Add cookies';
-        knop.onclick = proccess_addcookies_click;
-        console.log(knop);
-    }
-    if (soortknop === 'take') {
-        knop.innerHTML = 'Take cookie';
-        knop.onclick = proccess_takecookie_click;
-        console.log(knop);
-    }
-    if (soortknop === 'place') {
-        knop.innerHTML = 'Place lit';
-        knop.onclick = proccess_placelit_click;
-        console.log(knop);
+    switch(soortknop){
+        case 'add':
+            knop.textContent = 'vul met cookies';
+            knop.addEventListener('click', proccess_addcookies_click);
+            break;
+        case 'take':
+            knop.textContent = 'pak een cookie';
+            knop.addEventListener('click', proccess_addcookies_click);
+            break;
+        case 'place':
+            knop.textContent = 'plaats deksel';
+            knop.addEventListener('click', proccess_addcookies_click);
+            break;
+        default:
+            console.log('.');
     }
     // return het button element
     return knop;
@@ -71,7 +73,7 @@ function proccess_placelit_click() {
 
 // zorg dat het nummer van iedere cookie wordt weergegeven
 function create_cookie(){
-    cookie = document.createElement('div');
+    const cookie = document.createElement('div');
     cookie.classList.add('cookie');
     cookie.innerHTML = 'Cookie';
 
