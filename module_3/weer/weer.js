@@ -7,7 +7,17 @@ async function getWeather(city) {
     console.log(data);
     loadScreen(data);
 }
+
+// maak de functie loadScreen
+function loadScreen(weer) {
+    console.log(weer);
+    place.innerText = weer.name;
+    console.log(weer['name']);
+    place.innerHTML = weer.name;
+    desc.innerText = weer.weather[0].description;
+    temperature.innerText = weer.main.temp;
+}
  
 window.onload = function () {
-    getWeather('Dordrecht');
+    getWeather('Zwijndrecht');
 }
